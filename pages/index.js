@@ -9,6 +9,8 @@ function HomePage() {
 
     const enterEmail = emailInputRef.current.value;
     const enterFeedback = feedbackInputRef.current.value;
+
+    fetch(); // {email:'test@test.com', text:'Some feedback data'}
   }
 
   return (

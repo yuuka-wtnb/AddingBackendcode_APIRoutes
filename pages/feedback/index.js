@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { buildFeedbackPath, extractFeedback } from "../api/feedback";
+import { buildFeedbackPath, extractFeedback } from "../api/feedback/index";
 
 function FeedbackPage(props) {
     const [feedbackData, setFeedbackData] = useState();
@@ -7,7 +7,7 @@ function FeedbackPage(props) {
     //set id as a parameter
     function loadFeedbackHandler(id){
         //fetch(`/api/${id}`)でもOK // /api/some-feedback-id
-        fetch('/api/' + id).then(response => response.json()).then(data => {
+        fetch('/api/feedback/' + id).then(response => response.json()).then(data => {
             setFeedbackData(data.feedback);
         });
 

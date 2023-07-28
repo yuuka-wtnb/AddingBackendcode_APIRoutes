@@ -1,11 +1,11 @@
 import fs from "fs";
 import path from "path";
 
-function buildFeedbackPath() {
+export function buildFeedbackPath() {
   return path.join(process.cwd(), "data", "feedback.json");
 }
 
-function extractFeedback(filePath) {
+export function extractFeedback(filePath) {
   const fileData = fs.readFileSync(filePath);
   //JavaScriptオブジェクトに変換して使用するために、JSON.parse fileDataを実行
   const data = JSON.parse(fileData);
